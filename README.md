@@ -37,13 +37,11 @@ The Invoker service retrieves recommendations and manages caching. It includes:
 - **Parameters**:
   - `viewerid` (string): The ID of the viewer.
 - **Response**:
-  ```json
   {
     "recommendations": [
       {"reason": "<MODELNAME>", "result": <RANDOMNUMBER>}
     ]
   }
-  ```
 
 ## Caching
 
@@ -65,15 +63,11 @@ The Invoker service uses two levels of caching:
 ### Running the Services
 
 1. **Clone the Repository**:
-   ```sh
    git clone <REPOSITORY_URL>
    cd <REPOSITORY_NAME>
-   ```
 
 2. **Build and Start the Services**:
-   ```sh
    docker-compose up --build
-   ```
 
 3. **Verify the Services**:
 
@@ -88,32 +82,26 @@ The Invoker service uses two levels of caching:
    - **URL**: `http://localhost:5000/generate`
    - **Method**: POST
    - **Body**:
-     ```json
      {
        "model_name": "model1",
        "viewerid": "user123"
      }
-     ```
    - **Expected Response**:
-     ```json
      {
        "reason": "model1",
        "result": <RANDOMNUMBER>
      }
-     ```
 
 2. **Test the Invoker Service**:
    - **URL**: `http://localhost:5000/recommend`
    - **Method**: GET
    - **Parameters**: `viewerid=user123`
    - **Expected Response**:
-     ```json
      {
        "recommendations": [
          {"reason": "model1", "result": <RANDOMNUMBER>}
        ]
      }
-     ```
 
 ### Testing Caching
 
