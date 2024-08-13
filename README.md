@@ -1,13 +1,13 @@
-#Recommendation System
-##Overview
+# Recommendation System
+## Overview
 This repository contains a simple recommendation system consisting of two main services:
 
 Generator Service: Generates recommendations based on a model name and viewer ID.
 Invoker Service: Retrieves and merges recommendations, using caching for efficiency.
 The solution is containerized using Docker and orchestrated with Docker Compose.
 
-##Services
-##Generator Service
+## Services
+## Generator Service
 The Generator service generates recommendations and provides a single POST endpoint:
 
 Endpoint: /generate
