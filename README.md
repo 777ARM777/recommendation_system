@@ -21,12 +21,10 @@ The Generator service generates recommendations and provides a single POST endpo
   - `model_name` (string): The name of the recommendation model.
   - `viewerid` (string): The ID of the viewer.
 - **Response**:
-  ```json
   {
     "reason": "<MODELNAME>",
     "result": <RANDOMNUMBER>
   }
-  ```
 
 ### Invoker Service
 
